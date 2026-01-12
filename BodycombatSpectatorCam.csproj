@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Mono games use .NET Framework 4.7.2 or 4.8 -->
+    <TargetFramework>net472</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>BodycombatSpectatorCam</AssemblyName>
+    <RootNamespace>BodycombatSpectatorCam</RootNamespace>
+  </PropertyGroup>
+
+  <!-- 
+    IMPORTANT: Update these paths to match your game installation!
+    Default Steam path shown below - adjust if your game is installed elsewhere.
+  -->
+  <PropertyGroup>
+    <GamePath>C:\Program Files (x86)\Steam\steamapps\common\LES MILLS BODYCOMBAT</GamePath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MelonLoader Core (Mono version) -->
+    <Reference Include="MelonLoader">
+      <HintPath>$(GamePath)\MelonLoader\net35\MelonLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <!-- Unity Engine - For Mono games, these are in the game's Managed folder -->
+    <!-- Or in MelonLoader/Managed after first run -->
+    <Reference Include="UnityEngine">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <!-- Game Assembly - contains game-specific classes -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(GamePath)\BodyCombat_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
