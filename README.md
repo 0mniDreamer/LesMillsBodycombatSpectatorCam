@@ -19,12 +19,6 @@ A MelonLoader mod for Les Mills Bodycombat that adds a third-person camera view 
 3. **.NET Framework 4.7.2** (usually pre-installed on Windows 10/11)
 4. **Visual C++ Redistributables 2015-2022**
 
-## How to Check if Your Game is Mono or IL2CPP
-
-Look in your game folder:
-- **If you see `GameAssembly.dll`** → IL2CPP (use the other version)
-- **If you see `GameName_Data/Managed/Assembly-CSharp.dll`** → Mono (use this version)
-
 ## Installation
 
 ### Installing MelonLoader
