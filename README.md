@@ -15,7 +15,7 @@ A MelonLoader mod for Les Mills Bodycombat that adds a third-person camera view 
 ## Requirements
 
 1. **Les Mills Bodycombat** (Steam version)
-2. **MelonLoader v0.5.7 or v0.6.x** 
+2. **MelonLoader v0.5.7 or v0.6.x** (or newer)
 3. **.NET Framework 4.7.2** (usually pre-installed on Windows 10/11)
 4. **Visual C++ Redistributables 2015-2022**
 
@@ -31,7 +31,7 @@ Look in your game folder:
 
 1. Download MelonLoader from: https://github.com/LavaGang/MelonLoader/releases
 2. Run the installer and select your game's EXE
-3. For Mono games, MelonLoader v0.5.7 is very stable, but v0.6.x also works
+3. For Mono games, MelonLoader v0.5.7 is very stable, but v0.7.x also works
 4. Launch the game once to let MelonLoader initialize
 
 ### Installing the Mod
@@ -61,7 +61,7 @@ Look in your game folder:
 
 3. **Verify the Data folder name** - Update the paths if your game's data folder has a different name:
    ```xml
-   <HintPath>$(GamePath)\LES MILLS BODYCOMBAT_Data\Managed\UnityEngine.dll</HintPath>
+   <HintPath>$(GamePath)\BodyCombat_Data\Managed\UnityEngine.dll</HintPath>
    ```
 
 4. **Build the project**:
@@ -108,16 +108,15 @@ EnabledByDefault = true
 
 ### Performance issues
 - The spectator camera renders an additional view, which has some GPU cost
-- Try reducing game graphics settings if needed
 
 ### References not found when building
 - Verify the GamePath in the .csproj points to your actual game installation
 - Check that `GameName_Data/Managed/` folder exists and contains the Unity DLLs
-- The data folder name must match exactly (e.g., `LES MILLS BODYCOMBAT_Data`)
+- The data folder name must match exactly (e.g., `BodyCombat_Data`)
 - If DLLs are missing, try these alternate locations:
   - `MelonLoader/Managed/` (MelonLoader's copies)
   - `Mono/EmbedRuntime/` (older Unity versions)
-
+  - `MelonLoader/net35/`
 ## How It Works
 
 The mod creates a secondary Unity Camera that:
@@ -133,4 +132,4 @@ MIT License - Feel free to modify and share!
 ## Credits
 
 - MelonLoader by Lava Gang
-- Les Mills Bodycombat by Odders Lab
+- Les Mills XR Bodycombat by Odders Lab
