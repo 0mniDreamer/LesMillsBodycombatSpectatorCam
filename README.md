@@ -1,4 +1,4 @@
-# Bodycombat Spectator Camera Mod (Mono Version)
+# Bodycombat Spectator Camera Mod
 
 A MelonLoader mod for Les Mills Bodycombat that adds a third-person camera view for desktop viewers.
 
